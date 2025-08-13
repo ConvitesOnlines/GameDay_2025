@@ -3,7 +3,7 @@
 <head>
     <title>Convite Especial</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style>
         body {
             margin: 0;
@@ -19,14 +19,34 @@
         img {
             display: block;
             border: 0;
+            max-width: 100%;
+            height: auto;
         }
         table {
             border-collapse: collapse;
             border-spacing: 0;
+            width: 100%; /* tabela ocupa 100% da largura do container */
+            max-width: 1080px;
         }
         td {
             padding: 0;
             margin: 0;
+        }
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1080px;
+        }
+        .overlay-gif {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 1080px;
+            height: auto;
+            pointer-events: none;
+            z-index: 10;
         }
         .game-day-gif {
             width: 100%;
@@ -36,40 +56,17 @@
             font-family: Arial, sans-serif;
             font-size: 24px;
             padding: 20px 0;
-        }
-
-        /* NOVO: container relativo para a imagem do convite */
-        .image-wrapper {
-            position: relative;
-            width: 1080px; /* para manter tamanho da imagem */
-            max-width: 100%;
-        }
-        /* GIF sobreposto, centralizado no topo */
-        .overlay-gif {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%; /* ocupa toda a largura da imagem */
-            max-width: 1080px;
-            height: auto;
-            pointer-events: none; /* para clique passar para baixo */
-            z-index: 10;
+            box-sizing: border-box;
         }
     </style>
 </head>
 <body>
     <div id="container">
-        <!-- Adição do GIF GAME DAY no topo - removido para deixar só o gif sobreposto -->
-        <!-- <div class="game-day-gif">
-            GAME DAY<br>2025
-        </div> -->
-        
-        <table id="Tabela_01" width="1080" height="2178" border="0" cellpadding="0" cellspacing="0">
+        <table id="Tabela_01" border="0" cellpadding="0" cellspacing="0">
             <tr>
                 <td>
                     <div class="image-wrapper">
-                        <img src="https://i.imgur.com/MuagpQW.png" width="1080" height="1588" alt="Convite">
+                        <img src="https://i.imgur.com/MuagpQW.png" alt="Convite">
                         <img src="https://i.imgur.com/D3OXEKj.gif" alt="GIF sobreposto" class="overlay-gif">
                     </div>
                 </td>
@@ -77,20 +74,20 @@
             <tr>
                 <td>
                     <a href="https://wa.me/5535992163968?text=Yoroshiku%20onegaishimasu!%20Confirmando%20minha%20presen%C3%A7a.">
-                        <img src="https://i.imgur.com/fNe56vU.png" width="1080" height="166" style="border:0;" alt="Confirmar pelo WhatsApp">
+                        <img src="https://i.imgur.com/fNe56vU.png" alt="Confirmar pelo WhatsApp">
                     </a>
                 </td>
             </tr>
             <tr>
                 <td>
                     <a href="https://calendar.app.google/Z8wjpJETXff667FVA">
-                        <img src="https://i.imgur.com/zgclxD7.png" width="1080" height="148" style="border:0;" alt="Adicionar ao calendário">
+                        <img src="https://i.imgur.com/zgclxD7.png" alt="Adicionar ao calendário">
                     </a>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <img src="https://i.imgur.com/CAj5FcN.png" width="1080" height="276" alt="Rodapé">
+                    <img src="https://i.imgur.com/CAj5FcN.png" alt="Rodapé">
                 </td>
             </tr>
         </table>
