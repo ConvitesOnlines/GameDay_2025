@@ -1,43 +1,99 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-<title>Prancheta 2</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Convite Especial</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+        }
+        #container {
+            max-width: 1080px;
+            width: 100%;
+        }
+        img {
+            display: block;
+            border: 0;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        td {
+            padding: 0;
+            margin: 0;
+        }
+        .game-day-gif {
+            width: 100%;
+            text-align: center;
+            background-color: #000; /* Fundo preto para o GIF */
+            color: #fff; /* Cor do texto para contraste */
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            padding: 20px 0;
+        }
+
+        /* NOVO: container relativo para a imagem do convite */
+        .image-wrapper {
+            position: relative;
+            width: 1080px; /* para manter tamanho da imagem */
+            max-width: 100%;
+        }
+        /* GIF sobreposto, centralizado no topo */
+        .overlay-gif {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%; /* ocupa toda a largura da imagem */
+            max-width: 1080px;
+            height: auto;
+            pointer-events: none; /* para clique passar para baixo */
+            z-index: 10;
+        }
+    </style>
 </head>
-<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-<div id="centro" align="center">
-<table id="Tabela_01" width="1080" height="2178" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td>
-			<img src="blob:https://imgur.com/b7fc2d71-529e-411c-94bc-fd9f3c0fc696" width="1080" style="display: block" height="768" border="0" alt=""></td>
-	</tr>
-	<tr>
-		<td>
-			<a href="https://calendar.app.google/WqLPBVTQAfxBoLKHA">
-				<img src="https://i.imgur.com/yx0iJDm.png" width="1080" style="display: block" height="117" border="0" alt=""></a></td>
-	</tr>
-	<tr>
-		<td>
-			<img src="https://i.imgur.com/AgrsXS3.png" width="1080" style="display: block" height="324" border="0" alt=""></td>
-	</tr>
-	<tr>
-		<td>
-			<a href="https://maps.app.goo.gl/vVGgLeGJXqcbQ5Qn6">
-				<img src="https://i.imgur.com/naAYS46.png" width="1080" style="display: block" height="129" border="0" alt=""></a></td>
-	</tr>
-	<tr>
-		<td>
-			<img src="https://i.imgur.com/xm14iRf.png" width="1080" style="display: block" height="495" border="0" alt=""></td>
-	</tr>
-	<tr>
-		<td>
-			<a href="https://wa.me/5535991340952?text=Partiu%20aventura%20congelante!%20Eu%20vou%20sim!">
-				<img src="https://i.imgur.com/gcWTz0f.png" width="1080" style="display: block" height="129" border="0" alt=""></a></td>
-	</tr>
-	<tr>
-		<td>
-			<img src="https://i.imgur.com/IadLlnq.png" width="1080" style="display: block" height="216" border="0" alt=""></td>
-	</tr>
-</table>
-</div>
+<body>
+    <div id="container">
+        <!-- Adição do GIF GAME DAY no topo - removido para deixar só o gif sobreposto -->
+        <!-- <div class="game-day-gif">
+            GAME DAY<br>2025
+        </div> -->
+        
+        <table id="Tabela_01" width="1080" height="2178" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <div class="image-wrapper">
+                        <img src="https://i.imgur.com/MuagpQW.png" width="1080" height="1588" alt="Convite">
+                        <img src="https://i.imgur.com/D3OXEKj.gif" alt="GIF sobreposto" class="overlay-gif">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://wa.me/5535992163968?text=Yoroshiku%20onegaishimasu!%20Confirmando%20minha%20presen%C3%A7a.">
+                        <img src="https://i.imgur.com/fNe56vU.png" width="1080" height="166" style="border:0;" alt="Confirmar pelo WhatsApp">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://calendar.app.google/Z8wjpJETXff667FVA">
+                        <img src="https://i.imgur.com/zgclxD7.png" width="1080" height="148" style="border:0;" alt="Adicionar ao calendário">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="https://i.imgur.com/CAj5FcN.png" width="1080" height="276" alt="Rodapé">
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
